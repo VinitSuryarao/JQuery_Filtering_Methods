@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title> JQuery Test  </title>
+   <style>
+      #divA{
+         background-color: palegreen;
+         position: relative;
+         border: 1px solid black;
+      }
+      #divB{
+         background-color: rgb(209, 159, 186);
+         position: relative;
+         border: 1px solid black;
+      }
+   </style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type = "text/javascript">
+
+		    // ready func call when document is ready to render
+         $(document).ready(function() 
+         {     
+               // first()
+               $('#btnFirst').click(function(){
+                  $('p').first().css('color','red');
+                  $('ul li').first().css('color','red');
+               });
+               // last()
+               $('#btnLast').click(function(){
+                  $('p').last().css('color','Blue');
+                  $('ul li').last().css('color','Blue');
+               });
+                // eq()
+                $('#btnEq').click(function(){
+                  $('p').eq(3).css('color','pink');
+                  $('ul li').eq(3).css('color','pink');
+               });
+               // filter()
+               $('#btnFilter').click(function(){
+                  $('p').filter(".classP").css('color','green');
+                  $('ul li').filter('.classli').css('color','green');
+               });
+                 // not()
+               $('#btnnot').click(function(){
+                  $('p').not(".classP").css('color','yellow');
+                  $('ul li').not('.classli').css('color','yellow');
+               });
+                // slice()
+                $('#btnSlice').click(function(){
+                  $('p').slice(1,3).css('color','purple');
+                  $('ul li').not(1,3).css('color','purple');
+               });
+         });
+     </script>
+<head>
+   <body>
+   <div id="divA">
+      <p> This is First Line of Div A</p>
+      <p> This is Second Line of Div A</p>
+   </div>
+   <ul>
+      <li>Mumbai</li>
+      <li class="classli">Pune</li>
+      <li>Banglore</li>
+      <li>Hydrabad</li>
+   </ul>
+   <div id="divB">
+      <p class="classP"> This is First Line of Div B</p>
+      <p> This is Second Line of Div B</p>
+   </div>
+   <button id="btnFirst"> First </button> 
+   <button id="btnLast"> Last </button> 
+   <button id="btnEq"> EQ </button> 
+   <button id="btnFilter"> Filter </button> 
+   <button id="btnnot"> Not </button> 
+   <button id="btnSlice"> Slice </button> 
+</body>
+</html>
